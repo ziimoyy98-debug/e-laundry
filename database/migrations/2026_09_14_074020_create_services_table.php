@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('name'); 
             $table->decimal('price_per_kg', 12, 2);
-            $table->string('unit'); 
+            
             $table->integer('estimated_days')->default(1);
             $table->timestamps();
         });
