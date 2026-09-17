@@ -3,7 +3,6 @@
 ![Laravel Version](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel)
 ![PHP Version](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 Aplikasi manajemen operasional dan sistem kasir *laundry* digital berbasis RESTful API. Proyek ini dirancang untuk mempermudah pencatatan transaksi kasir, pelacakan status pengerjaan cuci/setrika secara *real-time*, serta pengelolaan data pelanggan dan paket layanan.
 
@@ -220,7 +219,3 @@ Skenario pengujian mencakup:
 4. **404 Not Found** — Request data transaksi dengan ID yang tidak terdaftar.
 
 ---
-
-## 📜 Lisensi
-
-Proyek ini dilindungi di bawah lisensi [MIT](LICENSE).
