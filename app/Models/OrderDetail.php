@@ -1,28 +1,32 @@
 <?php
 
-namespace App\Models;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class OrderDetail extends Model
+return new class extends Migration
 {
-    use HasFactory;
-
-    protected $fillable = [
-        'order_id',
-        'service_id',
-        'qty',
-        'subtotal',
-    ];
-
-    public function order()
+    public function up(): void
     {
-        return $this->belongsTo(Order::class);
+        Schema::create('order_details', function (Blueprint $table) {
+            $table->id();
+    
+            $table->foreignId('order_id')
+                  ->constrained('orders')
+                  ->onDelete('cascade');
+    
+            $table->foreignId('service_id')
+                  ->constrained('services')
+                  ->onDelete('cascade');
+    
+            $table->integer('qty');
+            $table->decimal('subtotal', 12, 2);
+            $table->timestamps();
+        });
     }
+    
+    
 
-    public function service()
-    {
-        return $this->belongsTo(Service::class);
-    }
-}
+};
+    
+    
